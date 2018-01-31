@@ -154,3 +154,5 @@ persist.timed.enable=true
 #ui-trends
 sys.use_fifo_ui=1
 
+# touch optimize
+persist.vendor.qti.inputopts.enable=true
