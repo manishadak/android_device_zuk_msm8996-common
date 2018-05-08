@@ -860,6 +860,15 @@ service wfdservice /system/bin/wfdservice
     # removed these because of limit of 12 groups
     #graphics net_bt net_bt_admin bluetooth
 
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
+    mkdir /dev/cpuset/camera-daemon
+    write /dev/cpuset/camera-daemon/cpus 0-3
+    write /dev/cpuset/camera-daemon/mems 0
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon
+    chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
+    chmod 0660 /dev/cpuset/camera-daemon/tasks
+
 # Seemp health service
 service seemp_healthd /vendor/bin/seemp_healthd
     class late_start
