@@ -522,12 +522,6 @@ service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
     group radio diag inet log
     disabled
 
-service vendor.imsrcsservice /vendor/bin/imsrcsd
-    class main
-    user system
-    group radio diag inet log
-    disabled
-
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start vendor.imsrcsservice
