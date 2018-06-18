@@ -40,3 +40,7 @@
 
 # ril
 /(vendor|system/vendor)/radio/qcril_database/qcril.db                    u:object_r:nv_data_file:s0
+
+# DTS EAGLE
+/dev/dts_eagle			      u:object_r:audio_device:s0
+
