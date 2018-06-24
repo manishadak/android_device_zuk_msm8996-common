@@ -20,6 +20,9 @@ ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.tunnel.encode=false
 vendor.voice.path.for.pcm.voip=true
+vendor.audio.use.dts_eagle=true
+use.dts_eagle=true
+hpx_send_params=1
 
 # Bluetooth
 bt.max.hfpclient.connections=1
